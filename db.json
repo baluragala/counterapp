@@ -1,0 +1,41 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "image": "hp-na-laptop-original-imaff7augnvgmznw.jpeg",
+      "title": "HP 15 Core i5 8th Gen - (8 GB/1 TB HDD/DOS) 15-BS145TU Laptop ",
+      "additionalInfo": "15.6 inch, SParkling Black, 2.1 kg",
+      "price": 38990,
+      "rating": 4.2,
+      "reviews":451
+    },
+    {
+      "id": 2,
+      "image": "hp-na-laptop-original-imaex8fhspprkq3p.jpeg",
+      "title": "HP 15 Pentium Quad Core - (4 GB/1 TB HDD/DOS) 15Q-BU009TU Laptop",
+      "additionalInfo": "15.6 inch, Black, 2.1 kg",
+      "price": 21990,
+      "rating": 4.1,
+      "reviews":2652
+    },
+    {
+      "id": 3,
+      "image": "lenovo-ip-320-laptop-original-imafffgvknqrjqtw.jpeg",
+      "title": "Lenovo Ideapad Core i5 7th Gen - (8 GB/1 TB HDD/Windows 10 Home/2 GB Graphics) IP 320 Laptop",
+      "additionalInfo": "15.6 inch, Black, 2.1 kg",
+      "price": 45990,
+      "rating": 4.3,
+      "reviews":8916
+    },
+    {
+      "id": 4,
+      "image": "lenovo-na-laptop-original-imaexjhtzgtnucgz.jpeg",
+      "title": "Lenovo Core i5 7th Gen - (8 GB/1 TB HDD/DOS/2 GB Graphics) IP 320E Laptop",
+      "additionalInfo": "15.6 inch, Onyx Black, 2.2 kg",
+      "price": 41990,
+      "rating": 4.3,
+      "reviews":8916
+    }
+
+  ]
+}
