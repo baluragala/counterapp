@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import ProductListItem from "./ProductListItem";
-import { View, ScrollView, RefreshControl } from "react-native";
+import {
+  View,
+  ScrollView,
+  RefreshControl,
+  ActivityIndicator
+} from "react-native";
 
 class ProductList extends Component {
   constructor(props) {
@@ -10,7 +15,7 @@ class ProductList extends Component {
 
   refreshproductList() {
     this.setState({ isRefreshing: true });
-    fetch("http://192.168.0.104:4000/products")
+    fetch("http://172.16.105.228:4000/products")
       .then(response => response.json())
       .then(products => {
         this.setState({ products, isRefreshing: false });
@@ -30,7 +35,7 @@ class ProductList extends Component {
   }
 
   componentDidMount() {
-    fetch("http://192.168.0.104:4000/products")
+    fetch("http://172.16.105.228:4000/products")
       .then(response => response.json())
       .then(products => {
         this.setState({ products, isRefreshing: false });
@@ -39,10 +44,10 @@ class ProductList extends Component {
 
   renderItems() {
     return this.state.products.map(p => (
-      <ProductListItem 
+      <ProductListItem
         key={p.id}
         title={p.title}
-        image={`http://192.168.0.104:4000/images/${p.image}`}
+        image={`http://172.16.105.228:4000/images/${p.image}`}
       />
     ));
   }
@@ -50,7 +55,11 @@ class ProductList extends Component {
   render() {
     return (
       <ScrollView refreshControl={this._renderRefreshControl()}>
-        {this.renderItems()}
+        {this.state.products.length > 0 ? (
+          this.renderItems()
+        ) : (
+          <ActivityIndicator size="large" color="blue" />
+        )}
       </ScrollView>
     );
   }
